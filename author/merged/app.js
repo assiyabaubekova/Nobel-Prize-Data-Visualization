@@ -1244,12 +1244,12 @@ let netBuilt      = false;
 // Data Loading
 // ─────────────────────────────────────────────────────────
 async function loadData() {
-  const [prize, phys, chem, med] = await Promise.all([
-    d3.csv('../../data/prize_paper.csv'),
-    d3.csv('../../data/Physics publication record.csv'),
-    d3.csv('../../data/Chemistry publication record.csv'),
-    d3.csv('../../data/Medicine publication record.csv'),
-  ]);
+const [prize, phys, chem, med] = await Promise.all([
+    d3.csv('data/prize_paper.csv'),
+    d3.csv('data/Physics publication record.csv'),
+    d3.csv('data/Chemistry publication record.csv'),
+    d3.csv('data/Medicine publication record.csv'),
+]);
 
   phys.forEach(d => d.field = 'Physics');
   chem.forEach(d => d.field = 'Chemistry');
